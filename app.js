@@ -1,17 +1,15 @@
 const app = Vue.createApp({
   data() {
     return {
-      courseGoalA: "courseA",
-      courseGoalB: "courseB",
-      vueLink: "https://vuejs.org",
+      name: "khanh",
+      age: 41,
+      img_url: "./img.png",
     };
   },
   methods: {
     outputGoal() {
-      const randomNumber = Math.random();
-      return randomNumber < 0.5 ? this.courseGoalA : this.courseGoalB;
+      return Math.random().toPrecision(1);
     },
   },
 });
-
 app.mount("#user-goal");

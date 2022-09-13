@@ -16,9 +16,12 @@
     <h1>Vue Course Goals</h1>
   </header>
   <section id="user-goal">
-    <h2>My Course Goal</h2>
+    <p>{{ name }}</p>
+    <p>{{ age }}</p>
+    <p>{{ age + 5 }}</p>
     <p>{{ outputGoal() }}</p>
-    <P>Learn more in <a v-bind:href="vueLink">Vue</a></P>
+    <input type="text" id="lname" name="lname" v-model="name">
+    <div><img v-bind:src=img_url></div>
   </section>
 </body>
 
