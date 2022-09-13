@@ -1,15 +1,9 @@
 const app = Vue.createApp({
   data() {
     return {
-      name: "khanh",
-      age: 41,
-      img_url: "./img.png",
+      counter: 0,
     };
   },
-  methods: {
-    outputGoal() {
-      return Math.random().toPrecision(1);
-    },
-  },
 });
-app.mount("#user-goal");
+
+app.mount('#events');
