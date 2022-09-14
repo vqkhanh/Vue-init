@@ -1,46 +1,30 @@
 const app = Vue.createApp({
+  data() {
+    return {
+      count: 0,
+    };
+  },
   watch: {
-    counter(value) {
-      if (value > 50) {
-        const that = this;
-        setTimeout(() => {
-          that.counter = 0;
-        }, 2000);
-      }
+    getResult() {
+      const that = this;
+      setTimeout(() => {
+        that.count = 0;
+      }, 5000);
     },
   },
   computed: {
-    fullname() {
-      console.log("re calculatior....");
-      if (this.name == "") return "";
-      else return this.name + " " + "khanh";
+    getResult() {
+      return this.count > 37 ? "To much!" : "Not there yet";
     },
-  },
-  data() {
-    return {
-      counter: 10,
-      output2: "",
-      confirm: "",
-      name: "",
-    };
   },
   methods: {
-    add() {
-      this.counter += 5;
+    add5() {
+      this.count += 5;
     },
-    remove() {
-      // this.output1 = event.target.value;
+    add1() {
+      this.count += 1;
     },
-    setName(event, other) {
-      this.output2 = event.target.value + other;
-    },
-    reset() {
-      this.name = "";
-    },
-    // submitForm() {
-    //   // this.confirm = this.output2;
-    // },
   },
 });
 
-app.mount("#events");
+app.mount("#assignment");
