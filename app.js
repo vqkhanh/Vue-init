@@ -1,24 +1,25 @@
 const app = Vue.createApp({
   data() {
     return {
-      counter: 0,
-      name: "",
+      output1: "",
+      output2: "",
+      confirm: "",
     };
   },
   methods: {
-    submitForm() {
+    showAlert() {
       alert("tets");
     },
-    setName(event, lastname) {
-      this.name = event.target.value + " " + lastname;
+    getInput(event) {
+      this.output1 = event.target.value;
     },
-    add(num) {
-      this.counter = this.counter + num;
+    getInput2(event) {
+      this.output2 = event.target.value;
     },
-    remove() {
-      this.counter--;
+    getEnter() {
+      this.confirm = this.output2;
     },
   },
 });
 
-app.mount("#events");
+app.mount("#assignment");
