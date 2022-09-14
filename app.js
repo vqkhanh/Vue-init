@@ -1,4 +1,14 @@
 const app = Vue.createApp({
+  watch: {
+    counter(value) {
+      if (value > 50) {
+        const that = this;
+        setTimeout(() => {
+          that.counter = 0;
+        }, 2000);
+      }
+    },
+  },
   computed: {
     fullname() {
       console.log("re calculatior....");
@@ -16,7 +26,7 @@ const app = Vue.createApp({
   },
   methods: {
     add() {
-      // alert("tets");
+      this.counter += 5;
     },
     remove() {
       // this.output1 = event.target.value;
