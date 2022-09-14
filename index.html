@@ -17,12 +17,12 @@
   </header>
   <section id="events">
     <h2>Events in Action</h2>
-    <button v-on:click="add(5)">Add</button>
-    <button v-on:click="remove()">Remove</button>
+    <button @:click="add(5)">Add</button>
+    <button @:click="remove()">Remove</button>
     <p v-once>init: {{ counter }}</p>
     <p>Result: {{ counter }}</p>
     <input type="text" v-model="name">
-    <button v-on:click="reset">Reset input</button>
+    <button @:click="reset">Reset input</button>
     <p>Your name: {{ fullname }}</p>
     <!-- <form v-on:submit.prevent="submitForm">
       <input type="text">
