@@ -6,6 +6,10 @@ const app = Vue.createApp({
     };
   },
   methods: {
+    submitForm(event) {
+      event.preventDefault();
+      alert("tets");
+    },
     setName(event, lastname) {
       this.name = event.target.value + " " + lastname;
     },
