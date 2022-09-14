@@ -19,6 +19,7 @@
     <h2>Events in Action</h2>
     <button v-on:click.left="add(5)">Add</button>
     <button v-on:click="remove()">Remove</button>
+    <p v-once>init: {{ counter }}</p>
     <p>Result: {{ counter }}</p>
     <input type="text" v-on:input="setName($event, 'khanh')">
     <p>Your name: {{ name }}</p>
