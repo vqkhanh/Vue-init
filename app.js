@@ -1,25 +1,36 @@
 const app = Vue.createApp({
+  computed: {
+    fullname() {
+      console.log("re calculatior....");
+      if (this.name == "") return "";
+      else return this.name + " " + "khanh";
+    },
+  },
   data() {
     return {
-      output1: "",
+      counter: 10,
       output2: "",
       confirm: "",
+      name: "",
     };
   },
   methods: {
-    showAlert() {
-      alert("tets");
+    add() {
+      // alert("tets");
     },
-    getInput(event) {
-      this.output1 = event.target.value;
+    remove() {
+      // this.output1 = event.target.value;
     },
-    getInput2(event) {
-      this.output2 = event.target.value;
+    setName(event, other) {
+      this.output2 = event.target.value + other;
     },
-    getEnter() {
-      this.confirm = this.output2;
+    reset() {
+      this.name = "";
     },
+    // submitForm() {
+    //   // this.confirm = this.output2;
+    // },
   },
 });
 
-app.mount("#assignment");
+app.mount("#events");
